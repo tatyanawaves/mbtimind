@@ -1,0 +1,1 @@
+"""MBTI Platform Backend Application."""

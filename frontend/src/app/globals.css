@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-outfit: 'Outfit', 'Inter', system-ui, sans-serif;
+    --font-jakarta: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-jakarta);
+    background-color: #FAF7F2;
+    color: #2C2638;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-outfit);
+    font-weight: 700;
+  }
+}
+
+/* Custom animations & interactive elements */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes float-reverse {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(-2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-reverse 7s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-pop-in {
+  animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Headspace 3D tactile button style */
+.btn-pop {
+  transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 6px 0px 0px #6136D7;
+}
+
+.btn-pop:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0px 0px #6136D7;
+}
+
+.btn-pop:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0px 0px #6136D7;
+}
+
+.btn-pop-white {
+  transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 6px 0px 0px #E9E4DC;
+}
+
+.btn-pop-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0px 0px #E9E4DC;
+}
+
+.btn-pop-white:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0px 0px #E9E4DC;
+}
+
+/* Hide scrollbars but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
