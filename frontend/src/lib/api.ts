@@ -3,7 +3,7 @@
  * Proxied through Next.js rewrites -> localhost:8000
  */
 
-const API_BASE = "/api/v1";
+const API_BASE = "https://mbtimind.onrender.com/api/v1";
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
   const res = await fetch(`${API_BASE}${path}`, {
