@@ -28,6 +28,16 @@ app.include_router(questions.router, prefix="/api/v1/questions", tags=["Question
 app.include_router(results.router, prefix="/api/v1/results", tags=["Results"])
 
 
+@app.on_event("startup")
+async def on_startup():
+    """Initialize database tables and seed questions on startup."""
+    from app.core.init_db import init_db
+    try:
+        await init_db()
+    except Exception as e:
+        print(f"Database initialization failed: {e}")
+
+
 @app.get("/health")
 async def health_check():
     return {"status": "healthy", "version": settings.APP_VERSION}
