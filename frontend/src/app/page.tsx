@@ -43,19 +43,14 @@ export default function WelcomePage() {
 
       {step === "welcome" ? (
         <div className="text-center max-w-xl px-4 animate-pop-in relative z-10">
-          {/* Relaxing Character Mascot (Smiling Headspace Purple Sun) */}
-          <div className="relative w-28 h-28 mx-auto mb-8 animate-float">
-            <div className="absolute inset-0 bg-primary/10 rounded-full scale-110 blur-md"></div>
-            <div className="w-full h-full bg-primary rounded-full flex items-center justify-center shadow-lg relative">
-              <svg viewBox="0 0 100 100" className="w-20 h-20 fill-white">
-                <circle cx="50" cy="50" r="40" />
-                <path d="M 30,42 C 30,42 36,48 42,42" stroke="#7B52FF" strokeWidth="5" strokeLinecap="round" fill="none" />
-                <path d="M 58,42 C 58,42 64,48 70,42" stroke="#7B52FF" strokeWidth="5" strokeLinecap="round" fill="none" />
-                <path d="M 38,58 A 12,12 0 0,0 62,58" stroke="#7B52FF" strokeWidth="5" strokeLinecap="round" fill="none" />
-                <circle cx="28" cy="54" r="5" fill="#F299B2" opacity="0.8" />
-                <circle cx="72" cy="54" r="5" fill="#F299B2" opacity="0.8" />
-              </svg>
-            </div>
+          {/* Premium Art Caricature Mascot (Huy Phan / Godly Website Style) */}
+          <div className="relative w-48 h-48 mx-auto mb-8 animate-float">
+            <div className="absolute inset-0 bg-primary/10 rounded-full scale-110 blur-xl"></div>
+            <img 
+              src="/mbti_portrait.png" 
+              alt="Artistic Meditation Caricature" 
+              className="w-full h-full object-contain relative z-10 drop-shadow-lg"
+            />
           </div>
 
           <h1 className="text-4xl md:text-5xl font-heading font-extrabold text-text-dark tracking-tight mb-4 leading-tight">
